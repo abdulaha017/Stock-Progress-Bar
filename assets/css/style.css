@@ -1,0 +1,15 @@
+
+.stock-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stock-info {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.stock-info span {
+    color: #000;
+    font-weight: 600;
+}

@@ -63,19 +63,24 @@ function abnipes_stock_progress_bar() {
     $bar_stock_product = $product->get_stock_quantity();
     $bar_stock_sales = get_post_meta($post->ID, 'total_sales', true);
     $product_total_quantity = $bar_stock_product + $bar_stock_sales;
-    $percentage    = round($bar_stock_product / $product_total_quantity * 100);
+    if( $product_total_quantity >= 1 ) {
+        $percentage    = round($bar_stock_product / $product_total_quantity * 100);
+    }
+    if( $bar_stock_product >= 1 ) :
     ?>
-    <div class="stock-info">
-        <div class="total-sold">Ordered: <span><?php echo $bar_stock_sales;  ?></span></div>
-        <div class="current-stock">Items available: <span><?php echo $bar_stock_product; ?></span></div>
-    </div>
-    <div class="progress-bar">
-        <div class="progress" data-percent="<?php echo $percentage; ?>"><span><?php // echo $percentage . '%'; ?></span></div>
-    </div>
+        <div class="stock-info">
+            <div class="total-sold">Ordered: <span><?php echo $bar_stock_sales;  ?></span></div>
+            <div class="current-stock">Items available: <span><?php echo $bar_stock_product; ?></span></div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" data-percent="<?php echo $percentage; ?>"><span><?php // echo $percentage . '%'; ?></span></div>
+        </div>
     <?php
+    endif;
 }
 
-add_action('woocommerce_single_product_summary', 'abnipes_stock_progress_bar', 15);
+add_action('woocommerce_single_product_summary', 'abnipes_stock_progress_bar', 25);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 
 
 

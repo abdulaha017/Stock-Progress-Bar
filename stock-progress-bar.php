@@ -66,7 +66,7 @@ function abnipes_stock_progress_bar() {
     if( $product_total_quantity >= 1 ) {
         $percentage    = round($bar_stock_product / $product_total_quantity * 100);
     }
-    if( $bar_stock_product >= 1 ) :
+    if( is_product() && $product->is_type( 'simple' ) && $bar_stock_product >= 1 ) {
     ?>
         <div class="stock-info">
             <div class="total-sold">Ordered: <span><?php echo $bar_stock_sales;  ?></span></div>
@@ -76,7 +76,12 @@ function abnipes_stock_progress_bar() {
             <div class="progress" data-percent="<?php echo $percentage; ?>"><span><?php // echo $percentage . '%'; ?></span></div>
         </div>
     <?php
-    endif;
+    } else if (is_product() && $product->is_type( 'variable' )) {
+    ?>
+        <!-- code about variable product quantity -->
+    <?php
+    }
+
 }
 
 add_action('woocommerce_single_product_summary', 'abnipes_stock_progress_bar', 25);

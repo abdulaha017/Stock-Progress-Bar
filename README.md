@@ -7,6 +7,13 @@ This project is for WooCommerce Product stock inventory. For now it's work in si
 <br>
 <br>
 
+<p><b><font size="+3">== ScreenSort ==</font></b></p>
+
+![Uploading progress-bar-screenshort.png…]()
+
+<br>
+<br>
+
 <p><b><font size="+3">== Installation ==</font></b></p>
 
 Upload the Stock Progress bar downloaded zip file in your wordpress site and activate this plugin. Now active your single product stock management. 

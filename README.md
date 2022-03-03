@@ -9,7 +9,7 @@ This project is for WooCommerce Product stock inventory. For now it's work in si
 
 <p><b><font size="+3">== ScreenSort ==</font></b></p>
 This product outlook below - <br>
-![image](https://user-images.githubusercontent.com/63844021/156587452-ce1fdbf9-32ca-4a16-a61d-66a7c1bdbfd4.png)
+![progress-bar-screenshort](https://user-images.githubusercontent.com/63844021/156587879-45ff9c03-4623-4f61-b4ce-17bdf34c056c.png)
 
 <br>
 <br>

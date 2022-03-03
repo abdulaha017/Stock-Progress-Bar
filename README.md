@@ -9,7 +9,7 @@ This project is for WooCommerce Product stock inventory. For now it's work in si
 
 <p><b><font size="+3">== ScreenSort ==</font></b></p>
 
-![Uploading progress-bar-screenshort.png…]()
+![progress-bar-screenshort](https://user-images.githubusercontent.com/63844021/156586720-04c0b16a-61c5-4fcc-83a4-361bebcf447b.png)
 
 <br>
 <br>
